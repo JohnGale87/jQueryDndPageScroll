@@ -17,13 +17,13 @@
 		
 		var top_el = $('#'+options.topId);
 		if (!top_el.length)
-			top_el = $('<div id="top_scroll_page">&nbsp;</div>').appendTo('body');
+			top_el = $('<div id="'+options.topId+'">&nbsp;</div>').appendTo('body');
 		
 		var bottom_el = $('#'+options.bottomId);
 		if (!bottom_el.length)
-			bottom_el = $('<div id="bottom_scroll_page">&nbsp;</div>').appendTo('body');
+			bottom_el = $('<div id="'+options.bottomId+'">&nbsp;</div>').appendTo('body');
 			
-		var both_el = $('#top_scroll_page, #bottom_scroll_page');
+		var both_el = $('#'+options.topId+', #'+options.bottomId);
 		both_el.hide();
 		both_el.css({
 			//backgroundColor: '#FFE698', 
