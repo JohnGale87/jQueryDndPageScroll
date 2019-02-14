@@ -11,7 +11,8 @@
 			topId: 'top_scroll_page',
 			bottomId: 'bottom_scroll_page',
 			delay: 50,
-			height: 20
+			height: 20,
+			scrollBy: 50,
 		};
 		var options = $.extend(defaults, options);
 		
@@ -52,7 +53,7 @@
 			//console.log('dragover '+direction+' last='+last+' current='+current);
 			
 			if (last != undefined && last == current && current > 0) {
-				var newScrollTop = scrollTop+direction*50;
+				var newScrollTop = scrollTop+direction*options.scrollBy;
 				//console.log('scrolling '+newScrollTop);
 				$('html,body').animate(
 					{scrollTop: newScrollTop},
